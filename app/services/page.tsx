@@ -1,13 +1,23 @@
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SubpageReturn from "@/components/SubpageReturn";
 
-export const metadata = {
-  title: "Services | A+ Digital Solutions",
+export const metadata: Metadata = {
+  title: "Services & Studio Capabilities",
   description:
-    "From brand strategy and graphic craft to websites, apps, and QA. Organized cleanly across six specialized capabilities so ambitious businesses and organizations can partner with one coherent team from day one.",
+    "Explore our six studio disciplines: Brand Strategy & Graphic Craft, UI/UX & Design Systems, Web Engineering, Tailored WordPress Studio, Custom Software & Apps, and QA Systems.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Services & Studio Capabilities | A+ Digital Solutions",
+    description:
+      "From brand strategy and graphic craft to websites, apps, and QA. Organized cleanly across six specialized capabilities for ambitious teams.",
+    url: "/services",
+  },
 };
 
 export default function ServicesPage() {

@@ -1,12 +1,23 @@
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import BrandLogo from "@/components/BrandLogo";
 
-export const metadata = {
-  title: "The Last Page (TLP) | Brand Portfolio | A+ Digital Solutions",
+export const metadata: Metadata = {
+  title: "The Last Page (TLP) — Brand Identity Case Study",
   description:
-    "A complete brand identity system and literary visual language crafted for an intimate, intentional community of readers.",
+    "A complete brand identity system, guidelines book, and literary social templates crafted by A+ Digital Solutions for The Last Page reading community.",
+  alternates: {
+    canonical: "/portfolio/the-last-page",
+  },
+  openGraph: {
+    title: "The Last Page (TLP) — Brand Identity Case Study | A+ Digital Solutions",
+    description:
+      "A complete brand identity system, guidelines book, and literary visual language crafted for an intimate, intentional community of readers.",
+    url: "/portfolio/the-last-page",
+    images: ["/assets/clients/tlp/tlp_november_flyer.jpg"],
+  },
 };
 
 export default function TheLastPageCaseStudy() {

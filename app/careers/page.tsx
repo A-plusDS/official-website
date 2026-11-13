@@ -1,12 +1,22 @@
 import React from "react";
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SubpageReturn from "@/components/SubpageReturn";
 
-export const metadata = {
-  title: "Careers | A+ Digital Solutions",
+export const metadata: Metadata = {
+  title: "Careers & Open Talent Roster",
   description:
-    "We work with designers, strategists, creatives, and engineers across flexible engagement models.",
+    "Collaborate with A+ Digital Solutions: Core studio full-time roles, fixed-term contract specialists, and freelance creative/engineering roster.",
+  alternates: {
+    canonical: "/careers",
+  },
+  openGraph: {
+    title: "Careers & Open Talent Roster | A+ Digital Solutions",
+    description:
+      "We work with designers, strategists, creatives, and engineers across flexible engagement models.",
+    url: "/careers",
+  },
 };
 
 export default function CareersPage() {

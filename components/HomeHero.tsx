@@ -4,6 +4,11 @@ import Link from "next/link";
 export default function HomeHero() {
   return (
     <section className="relative w-full h-[clamp(410px,68vh,590px)] min-h-[380px] sm:min-h-[440px] bg-[#06130E] bg-[url('/assets/hero_billboard_official.jpg')] bg-cover bg-[center_24%] sm:bg-[center_35%] flex flex-col justify-end items-center px-3 sm:px-5 pb-6 sm:pb-11">
+      {/* Accessible semantic heading for Google indexing and screen readers */}
+      <h1 className="sr-only">
+        A+ Digital Solutions — Brand Strategy, Design Systems & Custom Software Studio
+      </h1>
+
       {/* Readability Scrim Gradient */}
       <div
         className="absolute inset-0 pointer-events-none"

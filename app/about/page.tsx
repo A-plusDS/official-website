@@ -1,14 +1,25 @@
 import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SubpageReturn from "@/components/SubpageReturn";
 
-export const metadata = {
-  title: "About & Standards | A+ Digital Solutions",
+export const metadata: Metadata = {
+  title: "About & Standards",
   description:
-    "A creative digital partner shaping strategy, brand identity, product design, and custom software for ambitious teams.",
+    "Learn about A+ Digital Solutions: our studio philosophy, standards of craft, integrated team structure, and commitment to bridging brand strategy with software engineering.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About & Standards | A+ Digital Solutions",
+    description:
+      "A creative digital partner shaping strategy, brand identity, product design, and custom software for ambitious teams.",
+    url: "/about",
+    images: ["/assets/about_studio_identity.jpg"],
+  },
 };
 
 export default function AboutPage() {
