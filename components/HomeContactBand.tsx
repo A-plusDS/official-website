@@ -42,10 +42,10 @@ export default function HomeContactBand() {
   return (
     <section className="bg-[#F3F1EA] border-t border-[#E4E1D7] py-10 sm:py-[46px] pb-14 sm:pb-[60px] relative z-30" id="contact">
       <div className="container-wide">
-        <div className="bg-[#091A14] text-[#FAF9F5] border border-[#1A3328] rounded-[18px] sm:rounded-[24px] p-5 sm:p-[clamp(24px,3.8vw,42px)] shadow-[0_20px_50px_rgba(9,26,20,0.13)]">
-          <div className="grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-7 sm:gap-[34px] items-start">
+        <div className="bg-[#091A14] text-[#FAF9F5] border border-[#1A3328] rounded-[18px] sm:rounded-[24px] p-4 sm:p-6 lg:p-[clamp(24px,3.8vw,42px)] shadow-[0_20px_50px_rgba(9,26,20,0.13)]">
+          <div className="grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-7 sm:gap-[34px] items-start min-w-0">
             {/* Left Column */}
-            <div>
+            <div className="min-w-0 w-full">
               <div className="inline-flex items-center gap-[7px] text-[10px] font-bold tracking-[1.8px] uppercase text-[#9FB0A8] mb-2">
                 <BrandLogo mode="light" variant="mark" className="h-3 w-auto" />
                 <span>Start a Conversation</span>
@@ -53,10 +53,10 @@ export default function HomeContactBand() {
               <h2 className="font-display text-[clamp(22px,2.5vw,30px)] leading-[1.15] font-bold tracking-[-0.02em] text-[#FAF9F5] mb-2.5">
                 Bring the vision. We shape the brand and build.
               </h2>
-              <p className="text-[13.5px] text-[#B7C5BF] max-w-[390px] mb-4.5 leading-[1.6]">
+              <p className="text-[13.5px] text-[#B7C5BF] max-w-[390px] mb-4 leading-[1.6]">
                 Whether you need a fresh brand identity, a custom site or portfolio, a software product, or an idea-stage partner, reach our leads directly.
               </p>
-              <div className="inline-flex items-center gap-2 text-[11.5px] text-[#DCE3E0] py-1.5 px-3 rounded-full bg-[rgba(250,249,245,0.06)] border border-[#1A3328] mb-4.5">
+              <div className="inline-flex items-center gap-2 text-[11.5px] text-[#DCE3E0] py-1.5 px-3 rounded-full bg-[rgba(250,249,245,0.06)] border border-[#1A3328] mb-4">
                 <span className="text-emerald-400">●</span>
                 <span>Direct response from our studio leads</span>
               </div>
@@ -91,10 +91,10 @@ export default function HomeContactBand() {
             </div>
 
             {/* Right Form */}
-            <div className="bg-[#FAF9F5] text-[#091A14] rounded-[14px] sm:rounded-[18px] p-4.5 sm:p-[22px]">
-              <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
-                  <div className="flex flex-col gap-1">
+            <div className="bg-[#FAF9F5] text-[#091A14] rounded-[16px] sm:rounded-[20px] p-4 sm:p-6 w-full min-w-0 shadow-sm">
+              <form onSubmit={handleSubmit} className="w-full min-w-0">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3 min-w-0">
+                  <div className="flex flex-col gap-1 min-w-0">
                     <label htmlFor="c-name" className="text-[10.5px] font-semibold uppercase tracking-[0.8px] text-[#5C6A64]">
                       Your Name
                     </label>
@@ -105,10 +105,10 @@ export default function HomeContactBand() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full py-2 px-3 rounded-lg border border-[#D8D3C6] focus:border-[#091A14] bg-white text-[#091A14] text-[13px] outline-none min-h-[38px]"
+                      className="w-full min-w-0 py-2.5 px-3.5 rounded-lg border border-[#D8D3C6] focus:border-[#091A14] focus:ring-1 focus:ring-[#091A14] bg-white text-[#091A14] text-[16px] sm:text-[13px] outline-none min-h-[40px] transition-colors"
                     />
                   </div>
-                  <div className="flex flex-col gap-1">
+                  <div className="flex flex-col gap-1 min-w-0">
                     <label htmlFor="c-email" className="text-[10.5px] font-semibold uppercase tracking-[0.8px] text-[#5C6A64]">
                       Email Address
                     </label>
@@ -119,13 +119,13 @@ export default function HomeContactBand() {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full py-2 px-3 rounded-lg border border-[#D8D3C6] focus:border-[#091A14] bg-white text-[#091A14] text-[13px] outline-none min-h-[38px]"
+                      className="w-full min-w-0 py-2.5 px-3.5 rounded-lg border border-[#D8D3C6] focus:border-[#091A14] focus:ring-1 focus:ring-[#091A14] bg-white text-[#091A14] text-[16px] sm:text-[13px] outline-none min-h-[40px] transition-colors"
                     />
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
-                  <div className="flex flex-col gap-1">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3 min-w-0">
+                  <div className="flex flex-col gap-1 min-w-0">
                     <label htmlFor="c-topic" className="text-[10.5px] font-semibold uppercase tracking-[0.8px] text-[#5C6A64]">
                       How Can We Partner?
                     </label>
@@ -133,7 +133,7 @@ export default function HomeContactBand() {
                       id="c-topic"
                       value={formData.topic}
                       onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
-                      className="w-full py-2 px-3 rounded-lg border border-[#D8D3C6] focus:border-[#091A14] bg-white text-[#091A14] text-[13px] outline-none min-h-[38px]"
+                      className="w-full min-w-0 max-w-full py-2.5 px-3.5 rounded-lg border border-[#D8D3C6] focus:border-[#091A14] focus:ring-1 focus:ring-[#091A14] bg-white text-[#091A14] text-[16px] sm:text-[13px] outline-none min-h-[40px] transition-colors"
                     >
                       <option value="general">General Inquiry</option>
                       <option value="partnership">Partner With Us / Co-Build Product</option>
@@ -146,7 +146,7 @@ export default function HomeContactBand() {
                       <option value="discovery">Discovery Call / Consulting</option>
                     </select>
                   </div>
-                  <div className="flex flex-col gap-1">
+                  <div className="flex flex-col gap-1 min-w-0">
                     <label htmlFor="c-timeline" className="text-[10.5px] font-semibold uppercase tracking-[0.8px] text-[#5C6A64]">
                       Timeline
                     </label>
@@ -154,7 +154,7 @@ export default function HomeContactBand() {
                       id="c-timeline"
                       value={formData.timeline}
                       onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
-                      className="w-full py-2 px-3 rounded-lg border border-[#D8D3C6] focus:border-[#091A14] bg-white text-[#091A14] text-[13px] outline-none min-h-[38px]"
+                      className="w-full min-w-0 max-w-full py-2.5 px-3.5 rounded-lg border border-[#D8D3C6] focus:border-[#091A14] focus:ring-1 focus:ring-[#091A14] bg-white text-[#091A14] text-[16px] sm:text-[13px] outline-none min-h-[40px] transition-colors"
                     >
                       <option value="Exploring / Flexible">Exploring / Flexible</option>
                       <option value="Within 2-4 Weeks">Within 2 to 4 Weeks</option>
@@ -164,7 +164,7 @@ export default function HomeContactBand() {
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-1 mb-3">
+                <div className="flex flex-col gap-1 mb-4 min-w-0">
                   <label htmlFor="c-msg" className="text-[10.5px] font-semibold uppercase tracking-[0.8px] text-[#5C6A64]">
                     Project Vision & Goals
                   </label>
@@ -174,19 +174,19 @@ export default function HomeContactBand() {
                     placeholder="Tell us about your idea, product, or brand goals..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full py-2 px-3 rounded-lg border border-[#D8D3C6] focus:border-[#091A14] bg-white text-[#091A14] text-[13px] outline-none"
+                    className="w-full min-w-0 py-2.5 px-3.5 rounded-lg border border-[#D8D3C6] focus:border-[#091A14] focus:ring-1 focus:ring-[#091A14] bg-white text-[#091A14] text-[16px] sm:text-[13px] outline-none transition-colors resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="btn-pill-dark w-full justify-center text-center cursor-pointer"
+                  className="btn-pill-dark w-full justify-center text-center cursor-pointer min-h-[42px]"
                 >
                   Bring Your Vision to Life →
                 </button>
 
                 {submitted && (
-                  <div className="mt-2.5 p-2.5 px-3 rounded-lg bg-[#E2EAE5] text-[#091A14] text-[12.5px] font-medium">
+                  <div className="mt-3 p-3 rounded-lg bg-[#E2EAE5] text-[#091A14] text-[12.5px] font-medium border border-[#C5D7CE]">
                     ✓ Ready to send!{" "}
                     <a
                       href={mailtoUrl}

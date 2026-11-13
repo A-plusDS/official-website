@@ -17,7 +17,7 @@ export default function HomeHero() {
       <div className="relative z-10 inline-flex items-center gap-2 sm:gap-3.5 bg-[rgba(9,26,20,0.84)] backdrop-blur-[14px] border border-[rgba(250,249,245,0.22)] py-1 sm:py-1.5 pr-2.5 sm:pr-3 pl-1 sm:pl-1.5 rounded-full shadow-[0_16px_36px_rgba(0,0,0,0.34)] max-w-full">
         <Link
           href="/contact?topic=partnership"
-          className="bg-[#FAF9F5] text-[#091A14] text-[11.5px] sm:text-[12.5px] font-semibold py-2 px-3.5 sm:px-4.5 rounded-full whitespace-nowrap min-h-[34px] sm:min-h-[36px] inline-flex items-center transition-transform hover:-translate-y-0.5"
+          className="bg-[#FAF9F5] text-[#091A14] text-[11.5px] sm:text-[12.5px] font-semibold py-2 px-3.5 sm:px-5 rounded-full whitespace-nowrap min-h-[34px] sm:min-h-[36px] inline-flex items-center transition-transform hover:-translate-y-0.5"
         >
           Partner With Us →
         </Link>

@@ -11,7 +11,7 @@ export default function HomeCaseStudies() {
     >
       <div className="container-wide">
         {/* Top Row */}
-        <div className="flex justify-between items-end gap-4.5 mb-5 flex-wrap">
+        <div className="flex justify-between items-end gap-4 sm:gap-5 mb-5 flex-wrap">
           <div>
             <div className="inline-flex items-center gap-[7px] text-[10px] font-bold tracking-[1.8px] uppercase text-[#9FB0A8] mb-2">
               <BrandLogo mode="light" variant="mark" className="h-3 w-auto" />
