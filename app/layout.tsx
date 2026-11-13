@@ -33,7 +33,21 @@ const montserrat = Montserrat({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://aplusdigitalsolutions.com";
+// Automatically resolve domain for Vercel preview/production deployments or custom domain
+const getSiteUrl = () => {
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "");
+  }
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+  return "https://aplusdigitalsolutions.com";
+};
+
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -75,8 +89,10 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/assets/hero_billboard_official.jpg",
+        secureUrl: `${siteUrl}/assets/hero_billboard_official.jpg`,
         width: 1200,
         height: 630,
+        type: "image/jpeg",
         alt: "A+ Digital Solutions Studio billboard",
       },
     ],
