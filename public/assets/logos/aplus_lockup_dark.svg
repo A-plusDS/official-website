@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 110">
+  <g transform="translate(8, 16) scale(0.95)">
+    <path d="M 10 76 L 42 8 L 74 76" fill="none" stroke="#091A14" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="24" y1="48" x2="92" y2="48" stroke="#091A14" stroke-width="3.6" stroke-linecap="round"/>
+    <line x1="78" y1="34" x2="78" y2="62" stroke="#091A14" stroke-width="3.6" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(116, 52)">
+    <text font-family="Sora, sans-serif" font-size="25" font-weight="700" fill="#091A14" letter-spacing="1">A+ DIGITAL SOLUTIONS</text>
+    <text y="24" font-family="Inter, sans-serif" font-size="10" font-weight="500" fill="#5C6A64" letter-spacing="5.5">STRATEGY · DESIGN · TECHNOLOGY</text>
+  </g>
+</svg>
