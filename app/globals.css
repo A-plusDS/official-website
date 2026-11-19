@@ -930,5 +930,119 @@ body {
   }
 }
 
+/* ==========================================================================
+   FARMILY-INSPIRED SCROLL REVEAL & INTERACTIVE ENGINE
+   ========================================================================== */
+
+/* Reading progress bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #34D399; /* Emerald 400 */
+  z-index: 9999;
+  transition: width 0.08s ease-out;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.5);
+}
+
+/* Dropdown slide-fade entrance */
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-dropdown {
+  animation: dropdownSlide 0.26s cubic-bezier(0.16, 0.84, 0.44, 1) forwards;
+}
+
+/* Base Reveal Animation */
+.reveal,
+.reveal-up {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.75s cubic-bezier(0.16, 0.84, 0.44, 1),
+              transform 0.75s cubic-bezier(0.16, 0.84, 0.44, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-26px);
+  transition: opacity 0.75s cubic-bezier(0.16, 0.84, 0.44, 1),
+              transform 0.75s cubic-bezier(0.16, 0.84, 0.44, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(26px);
+  transition: opacity 0.75s cubic-bezier(0.16, 0.84, 0.44, 1),
+              transform 0.75s cubic-bezier(0.16, 0.84, 0.44, 1);
+  will-change: opacity, transform;
+}
+
+/* Stagger delays for children */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+
+/* Active revealed state */
+.revealed {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+
+/* Hero Ken Burns ambient zoom & pan (prominent & cinematic) */
+@keyframes kenburns {
+  0% {
+    transform: scale(1.02) translate(0%, 0%);
+  }
+  50% {
+    transform: scale(1.14) translate(-1.8%, -1.4%);
+  }
+  100% {
+    transform: scale(1.02) translate(0%, 0%);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburns 14s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* Smooth link arrow nudge */
+.arrow-nudge {
+  display: inline-block;
+  transition: transform 0.2s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+*:hover > .arrow-nudge,
+.group:hover .arrow-nudge {
+  transform: translateX(4px);
+}
+
+/* Accessible reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-up,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .animate-kenburns {
+    animation: none !important;
+  }
+}
+
 
 

@@ -118,7 +118,7 @@ export default function CaseStudiesPage() {
       <Header />
 
       {/* Subpage Hero */}
-      <section className="subpage-hero">
+      <section className="subpage-hero reveal-up">
         <div className="container-wide">
           <SubpageReturn theme="dark" />
 
@@ -180,14 +180,14 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Case Studies Grid - Overlapping Sheet Alabaster */}
-      <section className="sheet-alabaster">
+      <section className="sheet-alabaster reveal-up">
         <div className="container-wide">
           <div className="work-archive-grid">
             {filtered.map((item) => (
               <Link
                 key={item.id}
                 href={item.href}
-                className="archive-card"
+                className="archive-card reveal-up"
               >
                 {/* Stage */}
                 <div

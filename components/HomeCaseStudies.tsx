@@ -11,7 +11,7 @@ export default function HomeCaseStudies() {
     >
       <div className="container-wide">
         {/* Top Row */}
-        <div className="flex justify-between items-end gap-4 sm:gap-5 mb-5 flex-wrap">
+        <div className="flex justify-between items-end gap-4 sm:gap-5 mb-5 flex-wrap reveal-up">
           <div>
             <div className="inline-flex items-center gap-[7px] text-[10px] font-bold tracking-[1.8px] uppercase text-[#9FB0A8] mb-2">
               <BrandLogo mode="light" variant="mark" className="h-3 w-auto" />
@@ -27,15 +27,16 @@ export default function HomeCaseStudies() {
             </p>
             <Link
               href="/case-studies"
-              className="py-1.5 px-3.5 rounded-full bg-[#FAF9F5] text-[#091A14] text-[11.5px] font-semibold inline-flex items-center hover:bg-[#F3F1EA] transition-colors"
+              className="py-1.5 px-3.5 rounded-full bg-[#FAF9F5] text-[#091A14] text-[11.5px] font-semibold inline-flex items-center hover:bg-[#F3F1EA] transition-all hover:-translate-y-0.5"
             >
-              View All Case Studies ↗
+              <span>View All Case Studies</span>
+              <span className="arrow-nudge ml-1">↗</span>
             </Link>
           </div>
         </div>
 
         {/* 3 Work Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 sm:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 sm:gap-4 reveal-up delay-100">
           {/* 1. The Last Page (TLP) */}
           <Link
             href="/portfolio/the-last-page"

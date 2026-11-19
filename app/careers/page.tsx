@@ -25,7 +25,7 @@ export default function CareersPage() {
       <Header />
 
       {/* Subpage Hero */}
-      <section className="subpage-hero">
+      <section className="subpage-hero reveal-up">
         <div className="container-wide">
           <SubpageReturn theme="dark" />
 
@@ -40,7 +40,7 @@ export default function CareersPage() {
       </section>
 
       {/* Engagement Models - Overlapping Sheet Alabaster */}
-      <section className="sheet-alabaster">
+      <section className="sheet-alabaster reveal-up">
         <div className="container-wide">
           <div className="eyebrow-dark">
             <svg
@@ -124,7 +124,7 @@ export default function CareersPage() {
           </div>
 
           {/* Open Talent Roster CTA - conversation-card */}
-          <div className="conversation-card" style={{ marginTop: "30px", padding: "clamp(22px, 3vw, 32px)" }}>
+          <div className="conversation-card reveal-up" style={{ marginTop: "30px", padding: "clamp(22px, 3vw, 32px)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "20px", flexWrap: "wrap" }}>
               <div style={{ maxWidth: "580px" }}>
                 <small style={{ display: "block", fontSize: "10px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#9BB0A8", marginBottom: "6px" }}>

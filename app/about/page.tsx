@@ -28,7 +28,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Subpage Hero */}
-      <section className="subpage-hero">
+      <section className="subpage-hero reveal-up">
         <div className="container-wide ">
           <SubpageReturn theme="dark" />
 
@@ -58,7 +58,7 @@ export default function AboutPage() {
       </section>
 
       {/* Split Visual Section (Who We Are) - Overlapping Sheet Alabaster */}
-      <section className="sheet-alabaster">
+      <section className="sheet-alabaster reveal-up">
         <div className="container-wide">
           <div className="split-visual-grid">
             {/* Image Frame */}
@@ -120,7 +120,7 @@ export default function AboutPage() {
       </section>
 
       {/* Philosophy Section - Sheet Cream */}
-      <section className="sheet-cream">
+      <section className="sheet-cream reveal-up">
         <div className="container-wide">
           <div className="eyebrow-dark">
             <svg
@@ -171,7 +171,7 @@ export default function AboutPage() {
       </section>
 
       {/* What Sets Us Apart - Sheet Alabaster flat */}
-      <section className="sheet-alabaster" style={{ marginTop: 0, borderRadius: 0 }}>
+      <section className="sheet-alabaster reveal-up" style={{ marginTop: 0, borderRadius: 0 }}>
         <div className="container-wide">
           <div className="eyebrow-dark">
             <svg

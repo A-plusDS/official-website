@@ -26,7 +26,7 @@ export default function ServicesPage() {
       <Header />
 
       {/* Subpage Hero */}
-      <section className="subpage-hero">
+      <section className="subpage-hero reveal-up">
         <div className="container-wide">
           <SubpageReturn theme="dark" />
 
@@ -70,7 +70,7 @@ export default function ServicesPage() {
         <div className="container-wide">
           <div className="service-detail-list">
             {/* 01 Branding */}
-            <article id="branding" className="service-detail-card">
+            <article id="branding" className="service-detail-card reveal-up">
               <div>
                 <small>01 · Strategy, Brand Identity &amp; Graphic Design</small>
                 <h2>Brand Identity, Strategy &amp; Graphic Design</h2>
@@ -90,7 +90,7 @@ export default function ServicesPage() {
             </article>
 
             {/* 02 UI/UX Design (card-pine) */}
-            <article id="design" className="service-detail-card card-pine">
+            <article id="design" className="service-detail-card card-pine reveal-up">
               <div>
                 <small>02 · UI/UX &amp; Digital Product Design</small>
                 <h2>UI/UX &amp; Product Design</h2>
@@ -110,7 +110,7 @@ export default function ServicesPage() {
             </article>
 
             {/* 03 Web Engineering */}
-            <article id="web" className="service-detail-card">
+            <article id="web" className="service-detail-card reveal-up">
               <div>
                 <small>03 · Web Engineering</small>
                 <h2>Custom Websites Across Every Format</h2>
@@ -130,7 +130,7 @@ export default function ServicesPage() {
             </article>
 
             {/* 04 WordPress Studio (card-pine) */}
-            <article id="wordpress" className="service-detail-card card-pine">
+            <article id="wordpress" className="service-detail-card card-pine reveal-up">
               <div>
                 <small>04 · Dedicated WordPress Department</small>
                 <h2>WordPress Studio</h2>
@@ -150,7 +150,7 @@ export default function ServicesPage() {
             </article>
 
             {/* 05 Apps & SaaS */}
-            <article id="software" className="service-detail-card">
+            <article id="software" className="service-detail-card reveal-up">
               <div>
                 <small>05 · Custom Software &amp; Product Engineering</small>
                 <h2>Web Applications, Mobile &amp; SaaS</h2>
@@ -170,7 +170,7 @@ export default function ServicesPage() {
             </article>
 
             {/* 06 Consulting & QA (card-pine) */}
-            <article id="qa" className="service-detail-card card-pine">
+            <article id="qa" className="service-detail-card card-pine reveal-up">
               <div>
                 <small>06 · Digital Consulting, Ventures &amp; QA</small>
                 <h2>Digital Consulting &amp; QA Support</h2>

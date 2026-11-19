@@ -38,7 +38,7 @@ export default function HomePartnerStage() {
       id="partner"
     >
       <div className="container-wide">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.02fr_0.98fr] gap-7 sm:gap-[38px] items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.02fr_0.98fr] gap-7 sm:gap-[38px] items-center reveal-up">
           {/* Visual Frame */}
           <div
             className="relative rounded-[20px] overflow-hidden bg-[#091A14] border border-[#E4E1D7] shadow-[0_20px_48px_rgba(9,26,20,0.12)] aspect-[4/3]"

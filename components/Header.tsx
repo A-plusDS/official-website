@@ -52,38 +52,44 @@ export default function Header() {
   const services = [
     {
       num: "01",
-      title: "Brand, Strategy & Graphic Design",
-      desc: "Positioning, naming, identity books & brand graphics",
+      tag: "IDENTITY & CRAFT",
+      title: "Brand Strategy & Graphic Design",
+      desc: "Positioning, naming, identity systems & master brand books",
       href: "/services#branding",
     },
     {
       num: "02",
-      title: "UI/UX & Product Design",
-      desc: "Figma component libraries, user flows & prototypes",
+      tag: "EXPERIENCE & FLOW",
+      title: "UI/UX & Design Systems",
+      desc: "Modular Figma libraries, user flows & interactive prototypes",
       href: "/services#design",
     },
     {
       num: "03",
+      tag: "MODERN WEB",
       title: "Web Engineering",
-      desc: "Company sites, portfolios, storefronts & custom web",
+      desc: "Bespoke company sites, portfolios & high-performance storefronts",
       href: "/services#web",
     },
     {
       num: "04",
+      tag: "TAILORED CMS",
       title: "WordPress Studio",
-      desc: "Custom builds, curated plugins, content & ongoing care",
+      desc: "Custom themes, curated blocks, speed optimization & maintenance",
       href: "/services#wordpress",
     },
     {
       num: "05",
+      tag: "CUSTOM SOFTWARE",
       title: "Web Apps, Mobile & SaaS",
-      desc: "Full-stack web apps, mobile apps & SaaS products",
+      desc: "Full-stack software products, custom platforms & scalable APIs",
       href: "/services#software",
     },
     {
       num: "06",
+      tag: "RELIABILITY & QA",
       title: "Consulting & QA Support",
-      desc: "Roadmaps, cross-device QA & dependable product care",
+      desc: "Product roadmaps, cross-device audits & ongoing care",
       href: "/services#qa",
     },
   ];
@@ -151,8 +157,9 @@ export default function Header() {
 
         {/* Right Actions */}
         <div className="flex items-center gap-2.5 shrink-0">
-          <Link href="/contact" className="btn-pill-light hidden sm:inline-flex">
-            Partner With Us →
+          <Link href="/contact" className="btn-pill-light hidden sm:inline-flex group">
+            <span>Partner With Us</span>
+            <span className="arrow-nudge">→</span>
           </Link>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -164,48 +171,82 @@ export default function Header() {
         </div>
       </header>
 
-      {/* DESKTOP SERVICES DROPDOWN */}
+      {/* DESKTOP SERVICES DROPDOWN (Elevated Farmily-style Glass Drawer) */}
       {dropdownOpen && (
         <div
           ref={dropdownRef}
-          className="hidden min-[881px]:block bg-[#06130E] px-[clamp(18px,3.6vw,40px)] py-[18px] pb-[22px] border-b border-[rgba(250,249,245,0.12)] sticky top-[53px] z-40 animate-fadeIn"
+          className="hidden min-[881px]:block bg-[rgba(6,19,14,0.96)] backdrop-blur-[24px] px-[clamp(18px,3.6vw,40px)] py-6 pb-7 border-b border-[rgba(250,249,245,0.14)] shadow-[0_30px_70px_rgba(0,0,0,0.6)] sticky top-[53px] z-40 animate-dropdown"
         >
           <div className="max-w-[1100px] mx-auto">
-            <div className="flex justify-between items-center text-[10px] font-semibold uppercase tracking-[1.4px] text-[#FAF9F5] mb-3 flex-wrap gap-3">
-              <span>Our Core Capabilities</span>
-              <div className="flex items-center gap-3.5">
+            {/* Top Toolbar */}
+            <div className="flex justify-between items-center text-[10px] font-mono uppercase tracking-[1.6px] text-[#FAF9F5] mb-4 flex-wrap gap-3 pb-3 border-b border-[rgba(250,249,245,0.1)]">
+              <div className="flex items-center gap-2 text-emerald-400 font-bold">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span>OUR CORE CAPABILITIES · 6 SPECIALIZED DISCIPLINES</span>
+              </div>
+              <div className="flex items-center gap-4">
                 <Link
                   href="/services"
                   onClick={() => setDropdownOpen(false)}
-                  className="text-[#F3F1EA] border-b border-[rgba(243,241,234,0.4)] pb-0.5"
+                  className="text-xs font-mono text-[#F3F1EA] hover:text-emerald-400 transition-colors inline-flex items-center gap-1 group"
                 >
-                  Explore All Services →
+                  <span>Explore All Services</span>
+                  <span className="arrow-nudge">→</span>
                 </Link>
                 <button
                   type="button"
                   onClick={() => setDropdownOpen(false)}
-                  className="bg-[rgba(250,249,245,0.08)] hover:bg-[rgba(250,249,245,0.16)] border border-[rgba(250,249,245,0.22)] text-[#FAF9F5] rounded-full px-2.5 py-1 text-[10px] font-semibold tracking-[0.8px] uppercase cursor-pointer"
+                  className="bg-[rgba(250,249,245,0.06)] hover:bg-[rgba(250,249,245,0.14)] border border-[rgba(250,249,245,0.2)] text-[#FAF9F5] rounded-full px-3 py-1 text-[10px] font-mono tracking-[0.8px] uppercase transition-all cursor-pointer"
                 >
                   Close ×
                 </button>
               </div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-2.5">
+
+            {/* 6 Capabilities Cards Grid */}
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 mb-4">
               {services.map((item) => (
                 <Link
                   key={item.num}
                   href={item.href}
                   onClick={() => setDropdownOpen(false)}
-                  className="block bg-[rgba(250,249,245,0.04)] hover:bg-[rgba(250,249,245,0.07)] border border-[#1A3328] hover:border-[rgba(250,249,245,0.35)] rounded-[10px] p-3 md:p-3.5 transition-all"
+                  className="group block bg-[rgba(250,249,245,0.03)] hover:bg-[rgba(250,249,245,0.07)] border border-[#1A3328] hover:border-emerald-500/40 rounded-xl p-3.5 md:p-4 transition-all duration-200 hover:-translate-y-0.5 shadow-sm"
                 >
-                  <strong className="block font-display text-[12.5px] text-[#FAF9F5] mb-0.5">
-                    {item.title}
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="font-mono text-[10px] font-bold text-emerald-400 tracking-wider">
+                      STEP {item.num}
+                    </span>
+                    <span className="font-mono text-[9px] uppercase tracking-[1.2px] text-[#7C8A84] group-hover:text-[#A7B7B0] transition-colors">
+                      {item.tag}
+                    </span>
+                  </div>
+                  <strong className="font-display text-[13.5px] text-[#FAF9F5] group-hover:text-white transition-colors flex items-center justify-between mb-1">
+                    <span>{item.title}</span>
+                    <span className="arrow-nudge text-xs text-emerald-400 opacity-60 group-hover:opacity-100 transition-opacity">
+                      →
+                    </span>
                   </strong>
-                  <span className="text-[11.5px] text-[#A0AFA8] block leading-[1.4]">
+                  <span className="text-[11.5px] text-[#A0AFA8] group-hover:text-[#C4D0CB] block leading-[1.45] transition-colors">
                     {item.desc}
                   </span>
                 </Link>
               ))}
+            </div>
+
+            {/* Bottom Spotlight Strip */}
+            <div className="pt-3 border-t border-[rgba(250,249,245,0.08)] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs font-mono">
+              <span className="text-[#9FB0A8] flex items-center gap-2 text-[11px]">
+                <span className="text-emerald-400">●</span>
+                <span>Concept to Code: Direct collaboration with brand & software leads.</span>
+              </span>
+              <Link
+                href="/contact?topic=discovery"
+                onClick={() => setDropdownOpen(false)}
+                className="text-[#FAF9F5] hover:text-emerald-400 transition-colors inline-flex items-center gap-1.5 group font-semibold text-[11.5px]"
+              >
+                <span>Book a 20-Min Discovery Session</span>
+                <span className="arrow-nudge">→</span>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Sora, Playfair_Display, Cormorant_Garamond, Montserrat } from "next/font/google";
+import ScrollEffects from "@/components/ScrollEffects";
 import "./globals.css";
 
 const inter = Inter({
@@ -222,7 +223,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <ScrollEffects />
+        {children}
+      </body>
     </html>
   );
 }

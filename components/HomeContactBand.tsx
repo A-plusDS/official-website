@@ -43,7 +43,7 @@ export default function HomeContactBand() {
     <section className="bg-[#F3F1EA] border-t border-[#E4E1D7] py-10 sm:py-[46px] pb-14 sm:pb-[60px] relative z-30" id="contact">
       <div className="container-wide">
         <div className="bg-[#091A14] text-[#FAF9F5] border border-[#1A3328] rounded-[18px] sm:rounded-[24px] p-4 sm:p-6 lg:p-[clamp(24px,3.8vw,42px)] shadow-[0_20px_50px_rgba(9,26,20,0.13)]">
-          <div className="grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-7 sm:gap-[34px] items-start min-w-0">
+          <div className="grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-7 sm:gap-[34px] items-start min-w-0 reveal-up">
             {/* Left Column */}
             <div className="min-w-0 w-full">
               <div className="inline-flex items-center gap-[7px] text-[10px] font-bold tracking-[1.8px] uppercase text-[#9FB0A8] mb-2">
@@ -121,6 +121,35 @@ export default function HomeContactBand() {
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full min-w-0 py-2.5 px-3.5 rounded-lg border border-[#D8D3C6] focus:border-[#091A14] focus:ring-1 focus:ring-[#091A14] bg-white text-[#091A14] text-[16px] sm:text-[13px] outline-none min-h-[40px] transition-colors"
                     />
+                  </div>
+                </div>
+
+                {/* Quick-Select Intake Pathways (Farmily-style instant action) */}
+                <div className="mb-3.5">
+                  <span className="block text-[10px] font-mono uppercase tracking-[1.2px] text-[#7C8A84] mb-1.5 font-bold">
+                    SELECT PROJECT FOCUS:
+                  </span>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      { id: "branding", label: "Brand Identity" },
+                      { id: "design", label: "UI/UX & App" },
+                      { id: "web", label: "Custom Web" },
+                      { id: "wordpress", label: "WordPress" },
+                      { id: "discovery", label: "Discovery Call" },
+                    ].map((item) => (
+                      <button
+                        key={item.id}
+                        type="button"
+                        onClick={() => setFormData((prev) => ({ ...prev, topic: item.id }))}
+                        className={`text-[11px] font-mono py-1 px-2.5 rounded-md border transition-all cursor-pointer ${
+                          formData.topic === item.id
+                            ? "bg-[#091A14] text-[#FAF9F5] border-[#091A14] font-bold shadow-sm"
+                            : "bg-white text-[#5C6A64] border-[#D8D3C6] hover:border-[#091A14] hover:text-[#091A14]"
+                        }`}
+                      >
+                        ✦ {item.label}
+                      </button>
+                    ))}
                   </div>
                 </div>
 

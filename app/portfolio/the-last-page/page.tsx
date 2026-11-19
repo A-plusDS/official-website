@@ -36,7 +36,7 @@ export default function TheLastPageCaseStudy() {
 
       <div className="max-w-[1220px] mx-auto px-5 sm:px-10">
         {/* Case Hero */}
-        <section className="py-12 sm:py-20 border-b border-[#D9C9B8]">
+        <section className="py-12 sm:py-20 border-b border-[#D9C9B8] reveal-up">
           <div className="text-[11px] font-semibold tracking-[2.5px] uppercase text-[#6A0F1A] mb-4 flex items-center gap-2.5">
             <span>✦</span> Brand Identity · Guidelines · Social Templates
           </div>
@@ -74,7 +74,7 @@ export default function TheLastPageCaseStudy() {
         </section>
 
         {/* Logo System */}
-        <section className="py-14 sm:py-20 border-b border-[#D9C9B8]">
+        <section className="py-14 sm:py-20 border-b border-[#D9C9B8] reveal-up">
           <div className="flex justify-between items-baseline mb-8 sm:mb-10 flex-wrap gap-4">
             <h2 className="font-serif text-2xl sm:text-3xl text-[#6A0F1A] font-semibold">
               Logo System
@@ -116,7 +116,7 @@ export default function TheLastPageCaseStudy() {
         </section>
 
         {/* Color & Typography System */}
-        <section className="py-14 sm:py-20 border-b border-[#D9C9B8]">
+        <section className="py-14 sm:py-20 border-b border-[#D9C9B8] reveal-up">
           <div className="flex justify-between items-baseline mb-8 sm:mb-10 flex-wrap gap-4">
             <h2 className="font-serif text-2xl sm:text-3xl text-[#6A0F1A] font-semibold">
               Color & Typography System
@@ -191,7 +191,7 @@ export default function TheLastPageCaseStudy() {
         </section>
 
         {/* Social Templates & Collateral */}
-        <section className="py-14 sm:py-20">
+        <section className="py-14 sm:py-20 reveal-up">
           <div className="flex justify-between items-baseline mb-8 sm:mb-10 flex-wrap gap-4">
             <h2 className="font-serif text-2xl sm:text-3xl text-[#6A0F1A] font-semibold">
               Social Media Templates & Collateral
